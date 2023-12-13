@@ -1,0 +1,11 @@
+{
+  "name": "bookmark-reader",
+  "version": "1.0.0",
+  "description": "bookmark reader extension",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

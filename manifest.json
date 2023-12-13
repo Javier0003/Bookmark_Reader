@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Bookmark Reader",
+  "version": "1.0",
+  "description": "Check your bookmarks",
+  "permissions": [
+    "bookmarks"
+  ],
+  "browser_action": {
+    "default_popup": "index.html"
+  }
+}
