@@ -22,7 +22,7 @@ const btns = {
         function (tabs) {
           if(list){
             order++
-            if(order >= list.length - 1){
+            if(order >= list.length){
               order = list.length - 1
               return 
             }
