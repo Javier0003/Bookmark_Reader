@@ -26,8 +26,7 @@ const btns = {
               order = list.length - 1
               return 
             }
-            localStorage.removeItem('order')
-            localStorage.setItem('order', order)
+            setOrder(order)
             chrome.tabs.update(tabs[0].id, { url: list[order] })
           }
         }
@@ -45,8 +44,7 @@ const btns = {
               order = 0
               return
             }
-            localStorage.removeItem('order')
-            localStorage.setItem('order', order)
+            setOrder(order)
             chrome.tabs.update(tabs[0].id, { url: list[order] })
           }
         }
@@ -67,11 +65,13 @@ const btns = {
 }
 let playlist = []
 function displayBookmarks(bookmarks) {
+  playlist = []
   bookmarks.forEach(function (bookmark) {
     const button = document.createElement('button')
     button.innerHTML = bookmark.title
     if (!bookmark.children) {
       playlist.push(bookmark.url)
+      console.log(playlist)
       button.className = `link`
       button.addEventListener('click', function () {
         chrome.tabs.query(
@@ -96,4 +96,9 @@ function displayBookmarks(bookmarks) {
     }
     bookmarksList.appendChild(button)
   })
+}
+
+function setOrder(i){
+  localStorage.removeItem('order')
+  localStorage.setItem('order', i)
 }
