@@ -3,5 +3,6 @@
 <hr>
 <p>
   -🟥 options are Folders
+  <br>
   -🟦 options are Bookmarks
 </p>
