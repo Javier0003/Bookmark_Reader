@@ -1,0 +1,13 @@
+.folder{
+  background-color: red;
+}
+
+.bookmark{
+  background-color: white;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
