@@ -1,4 +1,4 @@
-import { bookmarkState } from '../../store/bookmark'
+import { bookmarkState } from '../../../store/bookmark'
 import styles from './styles.module.css'
 
 type FolderProps = {

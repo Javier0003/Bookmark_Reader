@@ -1,20 +1,28 @@
 import { useEffect } from 'react'
 import './App.css'
-import BookMarks from './components/body'
 import { bookmarkState } from './store/bookmark'
+import BookMarks from './components/body/body'
+import Control from './components/controls/controls'
+import { playlist } from './store/play'
+import { order as index} from './store/order'
 
 function App() {
   const { getBookmarks } = bookmarkState(state => state)
+  const { getPlaylist, currentPlaylist } = playlist(state => state)
+  const { getSaved } = index(state => state)
 
   useEffect (() => {
     getBookmarks()
+    getPlaylist()
+    getSaved()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
-    <>
-      <BookMarks/>
-    </>
+    <div style={{display: 'flex', flexDirection: 'column', gap: 5, width: '300px'}}>
+      <Control/>
+      {currentPlaylist.length === 0 && <BookMarks/>}
+    </div>
   )
 }
 
