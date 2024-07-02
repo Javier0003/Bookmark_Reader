@@ -1,0 +1,16 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.returnButton{
+  width: 80px;
+}
+
+.returnContainer{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
