@@ -1,5 +1,5 @@
 ## Bookmark Reader For Chrome
-![image](https://github.com/Javier0003/Bookmark_Reader/assets/125394473/90e3fddf-687a-4e1c-bfea-ace02173833d)
+![image](https://github.com/Javier0003/Bookmark_Reader/assets/125394473/72772eb7-f61a-4d2e-a2a2-10f9fa9d8385)
 
 <hr>
 <p>
