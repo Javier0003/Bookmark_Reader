@@ -10,6 +10,7 @@
 
 .container{
   background-color: rgb(221, 63, 63);
+  padding: 5px;
   min-width: 300px;
   min-height: 40px;
   display: flex;
@@ -23,6 +24,7 @@
 }
 
 .containerBookmark{
+  padding: 5px;
   background-color: rgb(110, 110, 254);
   padding-right: 8px;
   max-width: 400px;

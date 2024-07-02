@@ -4,23 +4,23 @@ import Folder from './components/folder'
 import styles from './styles.module.css'
 
 export default function BookMarks() {
-  const { current, old,setCurrent } = bookmarkState((state) => state)
+  const { current, old, setCurrent } = bookmarkState((state) => state)
 
   const handleReturn = () => {
     const prev = old.pop()
-    if(prev){
+    if (prev) {
       setCurrent(prev, true)
     }
     old.pop()
   }
 
-  const test = () =>{
-    console.log(old)
-  }
-
   return (
     <div className={styles.container}>
-      <button onClick={test}>xd</button>
+      <div className={styles.returnContainer}>
+        <button className={styles.returnButton} onClick={handleReturn}>
+          Return
+        </button>
+      </div>
       {current &&
         current.map(({ title, children, url }, index) => {
           if (children)
@@ -41,11 +41,6 @@ export default function BookMarks() {
             />
           )
         })}
-      <div className={styles.returnContainer}>
-        <button className={styles.returnButton} onClick={handleReturn}>
-          Return
-        </button>
-      </div>
     </div>
   )
 }

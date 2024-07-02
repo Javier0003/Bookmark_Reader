@@ -4,3 +4,8 @@
   gap: 20px;
   justify-content: center;
 }
+
+.controls{
+  width: 33%;
+  height: 40px;
+}

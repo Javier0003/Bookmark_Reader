@@ -3,7 +3,7 @@ import { create } from 'zustand'
 type BookMarkProps = {
   current: chrome.bookmarks.BookmarkTreeNode[]
   old: chrome.bookmarks.BookmarkTreeNode[][]
-  setCurrent: (v: chrome.bookmarks.BookmarkTreeNode[], optional: boolean) => void
+  setCurrent: (v: chrome.bookmarks.BookmarkTreeNode[], optional?: boolean) => void
   getBookmarks: () => void
   setOld: () => void
 }
@@ -11,7 +11,7 @@ type BookMarkProps = {
 export const bookmarkState = create<BookMarkProps>((set) => ({
   current: [],
   old: [],
-  setCurrent: (tree, optional?) => {
+  setCurrent: (tree, optional) => {
     set((state) => {
       if (!optional) {
         state.setOld()
