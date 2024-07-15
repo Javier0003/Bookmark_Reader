@@ -14,13 +14,8 @@ export default function BookMarks() {
     old.pop()
   }
 
-  const test = () =>{
-    console.log(old)
-  }
-
   return (
     <div className={styles.container}>
-      <button onClick={test}>xd</button>
       {current &&
         current.map(({ title, children, url }, index) => {
           if (children)
