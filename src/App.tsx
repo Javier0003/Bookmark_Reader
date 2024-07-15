@@ -19,7 +19,7 @@ function App() {
   }, [])
 
   return (
-    <div style={{display: 'flex', flexDirection: 'column', gap: 5, width: '300px'}}>
+    <div className='container'>
       <Control/>
       {currentPlaylist.length === 0 && <BookMarks/>}
     </div>

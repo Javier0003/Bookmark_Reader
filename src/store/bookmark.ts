@@ -11,7 +11,7 @@ type BookMarkProps = {
 export const bookmarkState = create<BookMarkProps>((set) => ({
   current: [],
   old: [],
-  setCurrent: (tree, optional?) => {
+  setCurrent: (tree, optional) => {
     set((state) => {
       if (!optional) {
         state.setOld()
